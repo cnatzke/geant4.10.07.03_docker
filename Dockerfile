@@ -39,6 +39,7 @@ WORKDIR /software
 
 # clone two-photon emission libraries
 COPY ./install.sh .
+
 RUN git clone https://github.com/cnatzke/geant4_2photon_physics.git && \
     mv install.sh geant4_2photon_physics && cd geant4_2photon_physics && \
     ./install.sh && rm -rf /software/geant4_2photon_physics
